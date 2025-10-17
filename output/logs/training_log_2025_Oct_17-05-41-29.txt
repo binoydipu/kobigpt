@@ -1,0 +1,37 @@
+Training KobiGPT Model
+Dataset: Tagore Poems
+Model Parameters: 25.481355 M
+Configuration: {'block_size': 256, 'vocab_size': 139, 'n_layer': 8, 'n_head': 8, 'n_embd': 512, 'dropout': 0.2, 'bias': True}
+Time: 1h 20mins
+
+Hyperparameters:
+Batch Size: 32
+Block Size: 256
+Learning Rate: 0.0003
+Max Iters: 10000
+Eval Interval: 500
+
+Starting training...
+
+Step	Train Loss	Val Loss
+Step 0: train loss 5.0543, val loss 5.0577
+Step 500: train loss 2.4852, val loss 2.5360
+Step 1000: train loss 1.9623, val loss 2.0271
+Step 1500: train loss 1.7947, val loss 1.8868
+Step 2000: train loss 1.6910, val loss 1.8060
+Step 2500: train loss 1.6284, val loss 1.7676
+Step 3000: train loss 1.5728, val loss 1.7283
+Step 3500: train loss 1.5114, val loss 1.7072
+Step 4000: train loss 1.4682, val loss 1.6990
+Step 4500: train loss 1.4253, val loss 1.6975
+Step 5000: train loss 1.3788, val loss 1.6964
+Step 5500: train loss 1.3366, val loss 1.6917
+Step 6000: train loss 1.2982, val loss 1.7074
+Step 6500: train loss 1.2621, val loss 1.7130
+Step 7000: train loss 1.2230, val loss 1.7294
+Step 7500: train loss 1.1794, val loss 1.7527
+Step 8000: train loss 1.1361, val loss 1.7646
+
+
+Comments:
+Stopped manually, model is overfitting.
