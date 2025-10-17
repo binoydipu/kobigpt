@@ -6,7 +6,7 @@ import time
 # ---------- Configuration ----------
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model_path = "../trained_models/kobigpt_model_2.pt"
-max_new_tokens = 500  # how many tokens to generate
+max_new_tokens = 3000  # how many tokens to generate
 temparature = 1.0     # higher temperature = more randomness
 # -----------------------------------
 
@@ -35,12 +35,12 @@ model.eval()
 # Start token (e.g. zero or custom prompt, 1 is "\n" in our vocab)
 
 # prompt = str("বিনয় ভাবছে আকাশ কেন নীল,")
-prompt = str('''বিনয় ভাবছে আকাশের নিচে, বিনয় শুনছে পাখির গান, 
-বিনয়ের মনে বাজে নতুন সুর, বিনয় লিখছে কবিতা। 
-''')
-context = torch.tensor(encode(prompt), dtype=torch.long, device=device).unsqueeze(0)
+# prompt = str('''বিনয় ভাবছে আকাশের নিচে, বিনয় শুনছে পাখির গান, 
+# বিনয়ের মনে বাজে নতুন সুর, বিনয় লিখছে কবিতা। 
+# ''')
+# context = torch.tensor(encode(prompt), dtype=torch.long, device=device).unsqueeze(0)
 # Alternatively, to start from scratch, uncomment the following line:
-# context = torch.zeros((1, 1), dtype=torch.long, device=device)
+context = torch.zeros((1, 1), dtype=torch.long, device=device)
 
 # Generate tokens
 with torch.no_grad():
